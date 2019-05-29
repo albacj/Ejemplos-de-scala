@@ -32,11 +32,16 @@ class Localizacion(override val xc: Int, override val yc: Int, val zc: Int) exte
 object Demo{
   
   def main(args: Array[String]){
-    //val pt = new Punto(10, 20);
-    //pt.move(10, 10); // Se mueve a la nueva localización.
+    val pt = new Punto(10, 20);
+    pt.move(10, 10); // Se mueve a la nueva localización.
     
-    val loc = new Localizacion(10, 20, 15);
-    loc.move(10, 10, 5);
+    def printPunto{
+      println("Localización punto X: " + pt.x);
+      println("Localización punto Y: " + pt.y);
+    }
+    
+//    val loc = new Localizacion(10, 20, 15);
+//    loc.move(10, 10, 5);
   }
   
 }
