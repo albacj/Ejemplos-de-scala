@@ -339,3 +339,54 @@ java.lang.NoSuchMethodError: org.eclipse.jdt.internal.core.SearchableEnvironment
 	at org.scalaide.ui.internal.completion.ScalaCompletionProposalImpl.getAdditionalProposalInfo(ScalaCompletionProposalImpl.scala:109)
 	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:116)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.scala-ide.sdt.core 4 0 2019-05-29 12:52:40.950
+!MESSAGE Throwable during asyncExec
+!STACK 0
+java.lang.NoSuchMethodError: org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(Lorg/eclipse/jdt/internal/core/JavaProject;Lorg/eclipse/jdt/core/WorkingCopyOwner;)V
+	at org.scalaide.core.internal.compiler.LocateSymbol.findPath$1(LocateSymbol.scala:53)
+	at org.scalaide.core.internal.compiler.LocateSymbol.findSourceFile$1(LocateSymbol.scala:73)
+	at org.scalaide.core.internal.compiler.LocateSymbol.findCompilationUnit(LocateSymbol.scala:75)
+	at org.scalaide.core.internal.compiler.LocateSymbol.findCompilationUnit$(LocateSymbol.scala:18)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.findCompilationUnit(ScalaPresentationCompiler.scala:54)
+	at org.scalaide.core.internal.compiler.LocateSymbol.findDeclaration(LocateSymbol.scala:81)
+	at org.scalaide.core.internal.compiler.LocateSymbol.findDeclaration$(LocateSymbol.scala:80)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.findDeclaration(ScalaPresentationCompiler.scala:54)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.$anonfun$mkHyperlink$1(ScalaPresentationCompiler.scala:445)
+	at scala.tools.nsc.util.InterruptReq.execute(InterruptReq.scala:26)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:444)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+
+!ENTRY org.eclipse.core.jobs 4 2 2019-05-29 12:54:34.548
+!MESSAGE An internal error occurred during: "Computing additional info".
+!STACK 0
+java.lang.NoSuchMethodError: org.eclipse.jdt.internal.core.SearchableEnvironment.<init>(Lorg/eclipse/jdt/internal/core/JavaProject;Lorg/eclipse/jdt/core/WorkingCopyOwner;)V
+	at org.scalaide.core.internal.compiler.LocateSymbol.findPath$1(LocateSymbol.scala:53)
+	at org.scalaide.core.internal.compiler.LocateSymbol.findSourceFile$1(LocateSymbol.scala:73)
+	at org.scalaide.core.internal.compiler.LocateSymbol.findCompilationUnit(LocateSymbol.scala:75)
+	at org.scalaide.core.internal.compiler.LocateSymbol.findCompilationUnit$(LocateSymbol.scala:18)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.findCompilationUnit(ScalaPresentationCompiler.scala:54)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$3(ScalaDoc.scala:51)
+	at scala.collection.immutable.List.flatMap(List.scala:335)
+	at org.scalaide.core.internal.compiler.Scaladoc.listFragments$1(ScalaDoc.scala:50)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$7(ScalaDoc.scala:61)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$2(ScalaDoc.scala:60)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.$anonfun$withSourceFile$1(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.$anonfun$internal$5(PresentationCompilerProxy.scala:101)
+	at scala.Option.flatMap(Option.scala:171)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile(InteractiveCompilationUnit.scala:201)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.withSourceFile$(InteractiveCompilationUnit.scala:200)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.withSourceFile(ScalaSourceFile.scala:71)
+	at org.scalaide.core.internal.compiler.Scaladoc.$anonfun$parsedDocComment$1(ScalaDoc.scala:48)
+	at scala.Option.map(Option.scala:146)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment(ScalaDoc.scala:48)
+	at org.scalaide.core.internal.compiler.Scaladoc.parsedDocComment$(ScalaDoc.scala:45)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.parsedDocComment(ScalaPresentationCompiler.scala:54)
+	at org.scalaide.core.internal.compiler.ScalaPresentationCompiler.$anonfun$mkCompletionProposal$7(ScalaPresentationCompiler.scala:420)
+	at org.scalaide.ui.internal.completion.ScalaCompletionProposalImpl.getAdditionalProposalInfo(ScalaCompletionProposalImpl.scala:109)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:116)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
