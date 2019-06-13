@@ -4,7 +4,7 @@ class Ejercicios {
   object Ejercicios{
     
     /* Elimina los elementos duplicados de una lista de cadenas. */
-    def quitaDuplicados(list: List[String]){
+    def quitaDuplicados(list: List[String]) = {
 
       val listaEntrada = ListBuffer(list)
       var copia : List[String] = List()
@@ -20,7 +20,6 @@ class Ejercicios {
     }
     
     /* Junta dos listas intercalando los elementos sin repetir */
-    
     def merge(lista1: List[Integer], lista2: List[Integer]): List[(Integer, Integer)] = {
       
       val listaRes = lista1 zip lista2
@@ -35,6 +34,15 @@ class Ejercicios {
       }
       
       return listaRes
+    }
+    
+    /* función que modifica una lista habiendo aplicado una función en sus elementos */
+    def miMap(f: Integer => Integer, list: List[Integer]) = {
+      
+      for(x <- list){
+        x + f(x)
+      }
+      
     }
     
   }
